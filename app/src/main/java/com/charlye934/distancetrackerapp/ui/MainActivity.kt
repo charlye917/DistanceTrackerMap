@@ -1,9 +1,13 @@
-package com.charlye934.distancetrackerapp
+package com.charlye934.distancetrackerapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import com.charlye934.distancetrackerapp.R
+import com.charlye934.distancetrackerapp.util.Constants
+import com.charlye934.distancetrackerapp.util.Permissions
+
 
 class MainActivity : AppCompatActivity() {
 

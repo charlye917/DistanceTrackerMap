@@ -7,29 +7,35 @@
 
     <fragment
         android:id="@+id/permissionFragment"
-        android:name="com.charlye934.distancetrackerapp.view.PermissionFragment"
+        android:name="com.charlye934.distancetrackerapp.ui.permission.PermissionFragment"
         android:label="fragment_permission"
         tools:layout="@layout/fragment_permission" >
         <action
             android:id="@+id/action_permissionFragment_to_mapsFragment"
-            app:destination="@id/mapsFragment" />
+            app:destination="@id/mapsFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/permissionFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/mapsFragment"
-        android:name="com.charlye934.distancetrackerapp.view.MapsFragment"
+        android:name="com.charlye934.distancetrackerapp.ui.maps.MapsFragment"
         android:label="fragment_maps"
         tools:layout="@layout/fragment_maps" >
         <action
             android:id="@+id/action_mapsFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
     </fragment>
-    <fragment
+    <dialog
         android:id="@+id/resultFragment"
-        android:name="com.charlye934.distancetrackerapp.view.ResultFragment"
+        android:name="com.charlye934.distancetrackerapp.ui.result.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" >
         <action
             android:id="@+id/action_resultFragment_to_mapsFragment"
             app:destination="@id/mapsFragment" />
-    </fragment>
+        <argument
+            android:name="result"
+            app:argType="com.charlye934.distancetrackerapp.model.Result" />
+    </dialog>
 </navigation>

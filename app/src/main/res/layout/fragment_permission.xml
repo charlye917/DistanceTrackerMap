@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.PermissionFragment">
+        tools:context=".ui.permission.PermissionFragment">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -44,11 +44,9 @@
             android:layout_marginLeft="32dp"
             android:layout_marginRight="32dp"
             android:layout_marginBottom="48dp"
-            android:text="Welcome to Distance Tracker. In Order to use our application we will first need to request location permission from you. Otherwise we will not be able to provide you with service. If you agree and wish to continue tap on the button below"
+            android:text="@string/message_permission"
+            style="@style/TextColor"
             android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            android:textStyle="italic"
             app:layout_constraintBottom_toTopOf="@+id/continue_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
